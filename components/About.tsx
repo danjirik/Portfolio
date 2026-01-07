@@ -27,6 +27,7 @@ export default function About() {
                             <p className={styles.paragraph}>
                                 Specializuji se na vývoj webových aplikací a testování softwaru.
                                 Rád hledám efektivní řešení a neustále se rozvíjím v nových technologiích.
+                                Ve volném čase se věnuji automatizaci a integracím (platforma n8n).
                             </p>
                         </div>
                     </div>

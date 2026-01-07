@@ -1,14 +1,21 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Briefcase, GraduationCap, Calendar } from 'lucide-react';
+import { Briefcase, GraduationCap, Calendar, Lightbulb } from 'lucide-react';
 import styles from './Timeline.module.css';
 
 const experience = [
     {
-        role: "Aplikační tester",
+        role: "Vývojář Softwaru & Team Lead",
         company: "Technologie hlavního města Prahy",
-        period: "05/2024 - Nyní",
+        period: "05/2025 - Nyní",
+        description: "Vedení vývoje Aplikace SSZ (integrace s Jira) a správa portálu pro hlášení poruch.",
+        type: "work"
+    },
+    {
+        role: "Aplikační Tester",
+        company: "Technologie hlavního města Prahy",
+        period: "05/2024 - 05/2025",
         description: "Testování softwaru pro správu a řízení pražského veřejného osvětlení.",
         type: "work"
     },
@@ -17,6 +24,23 @@ const experience = [
         company: "Technologická agentura České republiky",
         period: "01/2024 - 12/2024",
         description: "Spolupráce ČVUT s TAČR na tvorbě webové aplikace pro vizualizaci letištních dat.",
+        type: "work"
+    }
+];
+
+const otherActivities = [
+    {
+        role: "Doučování Programování",
+        company: "Freelance",
+        period: "12/2025 - Nyní",
+        description: "Mentoring studenta v základech programování a vývoje softwaru.",
+        type: "work"
+    },
+    {
+        role: "Freelance Vývojář",
+        company: "Zakázkový vývoj",
+        period: "11/2025",
+        description: "Tvorba portfolia na míru pro profesionálního fotografa.",
         type: "work"
     }
 ];
@@ -105,6 +129,31 @@ export default function Timeline() {
                                     </div>
                                     <h4 className={styles.role}>{item.degree}</h4>
                                     <h5 className={styles.company}>{item.school}</h5>
+                                    <p className={styles.description}>{item.description}</p>
+                                </motion.div>
+                            ))}
+                        </div>
+
+                        <div className={styles.columnHeader} style={{ marginTop: '3rem' }}>
+                            <Lightbulb className={styles.columnIcon} />
+                            <h3>Ostatní aktivity</h3>
+                        </div>
+                        <div className={styles.timeline}>
+                            {otherActivities.map((item, idx) => (
+                                <motion.div
+                                    key={idx}
+                                    className={styles.item}
+                                    initial={{ opacity: 0, x: 20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.3 + (idx * 0.1) }}
+                                >
+                                    <div className={styles.period}>
+                                        <Calendar size={14} />
+                                        <span>{item.period}</span>
+                                    </div>
+                                    <h4 className={styles.role}>{item.role}</h4>
+                                    <h5 className={styles.company}>{item.company}</h5>
                                     <p className={styles.description}>{item.description}</p>
                                 </motion.div>
                             ))}

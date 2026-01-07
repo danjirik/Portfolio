@@ -6,9 +6,30 @@ import styles from './Projects.module.css';
 
 const projects = [
     {
+        title: "Aplikace SSZ",
+        description: "Interní systém pro techniky THMP napojený na Jira API. Zefektivňuje správu světelných signalizačních zařízení.",
+        tech: ["React", "Jira API", "Enterprise"],
+        link: "#",
+        color: "from-blue-600 to-indigo-500"
+    },
+    {
+        title: "Portál hlášení poruch",
+        description: "Webová aplikace pro občany k hlášení závad na městském mobiliáři. Obsahuje logiku reportingu pro dispečink.",
+        tech: ["Web App", "Integration", "Public Service"],
+        link: "#",
+        color: "from-orange-500 to-red-400"
+    },
+    {
+        title: "Portfolio fotografa",
+        description: "Minimalistický prezentační web na zakázku s důrazem na vizuální prezentaci fotografií.",
+        tech: ["Frontend", "Design", "Freelance"],
+        link: "#",
+        color: "from-purple-500 to-pink-400"
+    },
+    {
         title: "Dema herní fyziky",
-        description: "Webová aplikace pro interaktivní výuku herní fyziky. Umožňuje studentům experimentovat s fyzikálními zákony v reálném čase prostřednictvím vizuálních simulací.",
-        tech: ["Web Technologies", "Simulace", "Education"],
+        description: "Webová aplikace pro interaktivní výuku herní fyziky. Umožňuje studentům experimentovat s fyzikálními zákony.",
+        tech: ["Simulace", "Education", "Physics"],
         link: "#",
         color: "from-blue-500 to-cyan-400"
     },
