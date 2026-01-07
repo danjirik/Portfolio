@@ -25,27 +25,9 @@ export default function About() {
                                 Jsem <strong className="text-gradient">Ing. Daniel Jiřík</strong>, absolvent magisterského studia na ČVUT se zaměřením na interakci člověka s počítačem.
                             </p>
                             <p className={styles.paragraph}>
-                                Specializuji se na vývoj webových aplikací a testování softwaru. Mám zkušenosti s full-cycle vývojem, od návrhu přes implementaci až po nasazení.
+                                Specializuji se na vývoj webových aplikací a testování softwaru.
                                 Rád hledám efektivní řešení a neustále se rozvíjím v nových technologiích.
                             </p>
-                            <p className={styles.paragraph}>
-                                V mém portfoliu najdete projekty, které kombinují moderní technologie s čistým a funkčním designem.
-                            </p>
-                        </div>
-
-                        <div className={styles.statsColumn}>
-                            <div className={styles.statCard}>
-                                <span className={styles.statNumber}>3+</span>
-                                <span className={styles.statLabel}>Roky studia & praxe</span>
-                            </div>
-                            <div className={styles.statCard}>
-                                <span className={styles.statNumber}>5+</span>
-                                <span className={styles.statLabel}>Velkých projektů</span>
-                            </div>
-                            <div className={styles.statCard}>
-                                <span className={styles.statNumber}>Agile</span>
-                                <span className={styles.statLabel}>Zkušenost v týmu</span>
-                            </div>
                         </div>
                     </div>
                 </motion.div>

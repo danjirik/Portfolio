@@ -23,6 +23,21 @@ export default function Hero() {
                         Spojuji technické znalosti s citem pro design.
                     </p>
 
+                    <div className={styles.statsRow}>
+                        <div className={styles.statItem}>
+                            <span className={styles.statNumber}>3+</span>
+                            <span className={styles.statLabel}>Roky praxe</span>
+                        </div>
+                        <div className={styles.statItem}>
+                            <span className={styles.statNumber}>5+</span>
+                            <span className={styles.statLabel}>Projektů</span>
+                        </div>
+                        <div className={styles.statItem}>
+                            <span className={styles.statNumber}>Agile</span>
+                            <span className={styles.statLabel}>Týmovost</span>
+                        </div>
+                    </div>
+
                     <div className={styles.ctaGroup}>
                         <a href="#projects" className={styles.primaryBtn}>Moje Projekty</a>
                         <a href="#contact" className={styles.secondaryBtn}>Kontaktovat</a>

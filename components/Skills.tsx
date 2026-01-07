@@ -1,5 +1,7 @@
 'use client';
 
+import React from 'react';
+
 import { motion } from 'framer-motion';
 import { Code, Database, Layout, PenTool, Terminal, TestTube } from 'lucide-react';
 import styles from './Skills.module.css';
@@ -33,20 +35,7 @@ const skillsData = [
 ];
 
 export default function Skills() {
-    const container = {
-        hidden: { opacity: 0 },
-        show: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1
-            }
-        }
-    };
-
-    const item = {
-        hidden: { opacity: 0, y: 20 },
-        show: { opacity: 1, y: 0 }
-    };
+    const [activeTab, setActiveTab] = React.useState(0);
 
     return (
         <section className={styles.skillsSection} id="skills">
@@ -56,27 +45,36 @@ export default function Skills() {
                     <div className={styles.line}></div>
                 </div>
 
-                <motion.div
-                    className={styles.grid}
-                    variants={container}
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, margin: "-100px" }}
-                >
-                    {skillsData.map((category, idx) => (
-                        <motion.div key={idx} variants={item} className={styles.card}>
-                            <div className={styles.cardHeader}>
-                                <div className={styles.iconWrapper}>{category.icon}</div>
-                                <h3 className={styles.categoryTitle}>{category.category}</h3>
-                            </div>
-                            <ul className={styles.skillList}>
-                                {category.items.map((skill, sIdx) => (
-                                    <li key={sIdx} className={styles.skillItem}>{skill}</li>
-                                ))}
-                            </ul>
+                <div className={styles.tabsContainer}>
+                    <div className={styles.tabList}>
+                        {skillsData.map((category, idx) => (
+                            <button
+                                key={idx}
+                                onClick={() => setActiveTab(idx)}
+                                className={`${styles.tabButton} ${activeTab === idx ? styles.activeTab : ''}`}
+                            >
+                                <span className={styles.tabIcon}>{category.icon}</span>
+                                <span className={styles.tabLabel}>{category.category}</span>
+                            </button>
+                        ))}
+                    </div>
+
+                    <div className={styles.tabContent}>
+                        <motion.div
+                            key={activeTab}
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className={styles.skillGrid}
+                        >
+                            {skillsData[activeTab].items.map((skill, idx) => (
+                                <div key={idx} className={styles.skillTag}>
+                                    {skill}
+                                </div>
+                            ))}
                         </motion.div>
-                    ))}
-                </motion.div>
+                    </div>
+                </div>
             </div>
         </section>
     );

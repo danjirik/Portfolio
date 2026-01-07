@@ -1,5 +1,5 @@
 .heroSection {
-    min-height: 90vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     position: relative;
@@ -41,6 +41,32 @@
     color: var(--text-muted);
     max-width: 500px;
     line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.statsRow {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.statNumber {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--foreground);
+    line-height: 1;
+}
+
+.statLabel {
+    font-size: 0.875rem;
+    color: var(--text-muted);
 }
 
 .ctaGroup {
