@@ -71,7 +71,7 @@ const education = [
 
 export default function Timeline() {
     return (
-        <section className={styles.timelineSection} id="experience">
+        <section className={styles.timelineSection} id="timeline">
             <div className="container">
                 <div className={styles.header}>
                     <h2 className={styles.heading}>Zkušenosti & Vzdělání</h2>
